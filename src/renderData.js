@@ -5,10 +5,16 @@ export const renderCoins = (coin) => {
   const coinsUl = document.querySelector("main .coins");
 
   const newCoinLi = document.createElement("li");
+  newCoinLi.classList.add("coin");
   newCoinLi.innerHTML = `
   <div class="remove-icon">
      <i class="fas fa-window-close"> </i>
+
   </div>
+  <h2 class="coin-name">
+    <span>${name}</span>
+    <sup>${symbol}</sup>
+  </h2>
   `;
   coinsUl.append(newCoinLi);
 };
