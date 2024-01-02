@@ -15,6 +15,15 @@ export const renderCoins = (coin) => {
     <span>${name}</span>
     <sup>${symbol}</sup>
   </h2>
+  <div class="coin-temp">${Number(price).toFixed(4)}</div>
+  <figure style='color: ${change < 0 ? "red" : "green"}'>
+    <img src="${iconUrl}" alt=""/>
+    <figcaption>
+        <i class="fa-solid fa-chart-line"></i>
+        <span>${change || "0"}%</span>
+    </figcaption>
+  </figure>
+
   `;
   coinsUl.append(newCoinLi);
 };
