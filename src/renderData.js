@@ -22,8 +22,12 @@ export const renderCoins = (coin) => {
         <i class="fa-solid fa-chart-line"></i>
         <span>${change || "0"}%</span>
     </figcaption>
+    <div>RANK: ${rank}</div>
   </figure>
 
   `;
   coinsUl.append(newCoinLi);
+  newCoinLi.querySelector(".remove-icon").addEventListener("click", () => {
+    newCoinLi.remove();
+  });
 };
